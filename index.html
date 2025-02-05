@@ -212,8 +212,8 @@
             { title: "Current Time", info: "12:23 PM." },
             { title: "Address of Origin", info: "228 36 1/2 Ave Pl E, West Fargo, ND 58078." },
             { title: "Address of Destination", info: "North Dakota State University, 1801 15th Ave N, Fargo, ND 58102." },
-            { title: "Distance to Destination", info: "0" },
-            { title: "Estimated Time to Destination", info: "0" },
+            { title: "Distance to Destination", info: "11.36 miles." },
+            { title: "Estimated Time to Destination", info: "17 minutes." },
             { title: "State of Charge of Battery", info: "18% charge." },
             { title: "Range of Current Battery", info: "44 minutes." },
             { title: "Estimated Drive Distance with Current Charge", info: "33 miles." },
@@ -231,10 +231,10 @@
                 name: 'Element Hotel',
 
                 location: '925 19th Ave E, West Fargo 58078',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '3.49',
+                originTime: '8',
+                destDistance: '9.11',
+                destTime: '14',
 
                 waitTime: [
                         { type: 'J1772', value: '0' }
@@ -270,10 +270,10 @@
                 name: 'Roberts Commons (RoCo)',
 
                 location: '217 Roberts Street (Roberts Commons Ramp) SB-, Fargo 58102',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '9.56',
+                originTime: '18',
+                destDistance: '2.35',
+                destTime: '7',
 
                 
                 waitTime: [
@@ -936,8 +936,8 @@
         // Add route time/distance to instructions & update charging station details
         map.on('load', async () => {
             await getRoute(0); // Ensure this is awaited properly
-            await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
-            await updateChargingStationDetails();  // Ensure this is awaited properly
+            // await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
+            // await updateChargingStationDetails();  // Ensure this is awaited properly
             addChargingStations();  // You might need to re-add stations to reflect updated data
         });
 
